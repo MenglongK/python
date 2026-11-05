@@ -1,5 +1,7 @@
 import cowsay
 import random
+import subprocess
+subprocess.run("clear", shell=True)
 
 " Print a cow saying 'Ratana' "
 cowsay.cow("Ratana")
@@ -60,3 +62,15 @@ print(text.split(" ")) # Output: ['Python', 'is', 'fun']
 
 " string concatenation "
 print("Hello" + " " + "World")  # Output: Hello World
+
+" format string "
+age = 25
+txt = "My name is Ratana, and I am {} years old."
+print(txt.format(age))  # Output: My name is Ratana, and I am 25 years old.
+
+" input datatype default is string "
+name = input("Enter your name: ")
+age = int(input("Enter your age: "))
+print("Your name is:", name)
+print("Your age is:", age)
+print(type(age)) # Output: <class 'int'> due to conversion from string to int
